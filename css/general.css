@@ -33,10 +33,11 @@ Paragraph default: 1.6
 #333
 
 --- 05 SHADOWS
-
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 --- 06 BORDER-RADIUS
 Default: 8px
+medium: 12px
 
 --- 07 WHITE-SPACES
 
@@ -166,4 +167,8 @@ body {
 
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+strong {
+  font-weight: 500;
 }
