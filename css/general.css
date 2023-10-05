@@ -26,7 +26,10 @@ Paragraph default: 1.6
 - Tint: 
 #fdf2e9
 #fae5d3
-- Shades: #cf711f
+#eb984e
+- Shades: 
+#cf711f
+
 - Accent:
 - Grey: 
 #6F6F6F (Liggtest Grey allowed on  #fdf2e9)
@@ -35,6 +38,7 @@ Paragraph default: 1.6
 
 --- 05 SHADOWS
 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
 
 --- 06 BORDER-RADIUS
 Default: 8px
