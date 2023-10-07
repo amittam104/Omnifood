@@ -115,9 +115,10 @@
   .btn--form {
     margin-top: 1.2rem;
   }
-
+  /* Mobile Nav */
   .btn-mobile-nav {
     display: block;
+    z-index: 9999;
   }
 
   .main-nav {
