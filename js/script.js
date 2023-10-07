@@ -44,9 +44,29 @@ allLinks.forEach(function (link) {
   });
 });
 
+// Sticky Navigation bar
+const sectionheroEl = document.querySelector(".section-hero");
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+    if (ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+obs.observe(sectionheroEl);
+
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
-function checkFlexGap() {
+(function checkFlexGap() {
   var flex = document.createElement("div");
   flex.style.display = "flex";
   flex.style.flexDirection = "column";
@@ -61,7 +81,7 @@ function checkFlexGap() {
   console.log(isSupported);
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
-}
+})();
 checkFlexGap();
 
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
